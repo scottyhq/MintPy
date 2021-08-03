@@ -1,0 +1,42 @@
+# create environment : conda env create -f environment.yml
+# update dependencies: conda env update -f environment.yml
+# remove environment : conda env remove -n mintpy
+# enter  environment : conda activate mintpy
+# exit   environment : conda deactivate
+name: mintpy
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.6,<3.9
+  - cartopy
+  - cvxopt
+  - dask>=1.0
+  - dask-jobqueue>=0.3
+  - defusedxml
+  - h5py<3
+  - joblib
+  - lxml
+  - matplotlib
+  - numpy
+  - pip
+  - pyproj
+  - scikit-image
+  - scipy
+  - pip:
+    - git+https://github.com/insarlab/PySolid.git
+    - git+https://github.com/tylere/pykml.git
+  # for ARIA, FRInGE, HyP3, GMTSAR
+  - gdal>=3
+  # for PyAPS
+  - cdsapi
+  - ecCodes
+  - netcdf4
+  - pygrib
+  # - pyhdf   # required by MERRA, which is currently not supported in pyaps3
+  # for pyresample
+  - pyresample
+  - openmp
+  - pykdtree
+  - xarray
+  - zarr
