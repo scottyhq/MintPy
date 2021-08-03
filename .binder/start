@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export MINTPY_HOME=/home/jovyan
+export PATH=${PATH}:${MINTPY_HOME}/mintpy
+export PYTHONPATH=${PYTHONPATH}:${MINTPY_HOME}
+
+exec "$@"
